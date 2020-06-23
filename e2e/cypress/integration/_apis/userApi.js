@@ -4,8 +4,8 @@ const responseToToken = (resp) => {
     return resp.body['user'].token
 }
 
-const user = "jprealini@gmail.com"
-const password = "jppooh74"
+const user = "nadia.derenzis@gmail.com"
+const password = "nadia123"
 
 class userApi {
     userLogin() {

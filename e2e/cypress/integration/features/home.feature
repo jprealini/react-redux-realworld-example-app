@@ -6,8 +6,8 @@ Feature: Home login
     Scenario: Successfull UI login
         Given I visit the home page
         When  I sign in
-        And I type user and password
-        Then I should login
+        And I type email "nadia.derenzis@gmail.com" with password "nadia123"
+        Then I should login with my user name "nadiadr"
 
     @smoke
     Scenario: Access to new post editor
