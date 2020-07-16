@@ -29,7 +29,7 @@ const apiBaseUrl = Cypress.env('apiBaseUrl')
 
 Cypress.Commands.add('loginBySingleSignOn', (overrides = {}, user, password) => {
     const options = {
-        url: apiBaseUrl + '/users/login',
+        url: apiBaseUrl + 'users/login',
         method: 'POST',
         qs: {
             redirectTo: 'http://localhost:4100/',

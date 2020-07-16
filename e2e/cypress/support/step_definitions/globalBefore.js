@@ -11,7 +11,7 @@ const apiBaseUrl = Cypress.env('apiBaseUrl')
 
 before(() => {
 
-    const spec = Cypress.mocha.getRunner().suite.ctx.currentTest.parent.title;        
+    const spec = Cypress.mocha.getRunner().suite.ctx.currentTest.parent.title; 
     
 });
 

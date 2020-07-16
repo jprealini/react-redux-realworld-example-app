@@ -16,6 +16,7 @@ When(/^I type user and password$/, () => {
     cy.get('input[type=email]').type('jprealini@gmail.com')
     cy.get('input[type=password]').type('123456')
     cy.get('button').contains('Sign in').click()
+    cy.wait(1000)
 });
 
 When(/^I create a new post$/, () => {
@@ -39,9 +40,14 @@ Then(/^I should see the new post detail page with title "([^"]*)"$/, (title) => 
     cy.get('h1').should('contain', title)
 });
 
-
 When(/^I like a post$/, () => {
+    cy.get('a').contains('Global Feed').click()    
+    cy.get('button').should('have.class','btn')
+    .and('have.class','btn-sm').eq(1).as('boton')
+    cy.get('@boton').click()
 });
 
 Then(/^the like count should be increased by one$/, () => {	
+    cy.get('@boton').should('contain','1')
+    cy.get('@boton').should('have.class','btn-primary')
 });

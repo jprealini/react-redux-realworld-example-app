@@ -1,9 +1,8 @@
 class Helper {
 
-    responseToToken(resp) {
+    responseToToken(resp) {        
         return resp.body['user'].token;
     }
-
 }
 
 export default Helper;

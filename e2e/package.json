@@ -4,7 +4,7 @@
   "description": "e2e tests for react-redux-realworld app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "debug": "cross-env CYPRESS_REMOTE_DEBUGGING_PORT=9222 cypress open"
   },
   "author": "JP",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "nonGlobalStepDefinitions": false
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "cypress": "^4.8.0",
     "cypress-cucumber-preprocessor": "^2.3.1"
   }
